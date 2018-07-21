@@ -4,8 +4,8 @@ class Artist
 
   @@all = []
 
-  def initialize(artist_name)
-    @nartist_name = artist_name
+  def initialize(name)
+    @name = name
     @@all << self
   end
 

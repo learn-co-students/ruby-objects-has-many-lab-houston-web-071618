@@ -4,8 +4,8 @@ class Artist
 
   @@all = []
 
-  def initialize(name)
-    @name = name
+  def initialize(artist_name)
+    @nartist_name = artist_name
     @@all << self
   end
 
@@ -17,14 +17,14 @@ class Artist
       song.artist = self
     end
 
-  def add_song_by_name(name)
-    song = Song.new(name)
+  def add_song_by_name(song_name)
+    song = Song.new(song_name)
     song.artist = self
   end
 
   def songs
-    Song.all.select do |song|
-      song.artist == self
+    Song.all.select do |song_name|
+      song_name.artist == self
     end
   end
 
